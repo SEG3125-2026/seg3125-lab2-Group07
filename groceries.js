@@ -92,11 +92,7 @@ function restrictListProducts(prods, restriction) {
 			product_names.push(prods[i].name);
 		}
 	}
-	return product_names.reverse();
-}
-
-function sortPrice(prods){
-	return prods.sort((a,b) => a.price - b.price);
+	return product_names;
 }
 
 function appearanceProds(prods){

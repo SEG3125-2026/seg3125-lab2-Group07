@@ -41,14 +41,26 @@ function populateListProductChoices(slct1, slct2) {
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
-		
+
+	// Sort the prices
+	document.getElementById('cheapPrice').addEventListener('change', function(){
+		if (this.checked){
+			products.sort((a,b) => b.price - a.price);
+		} else{
+			//products.sort((a,b) => a.name.localeCompare(b.name));
+			products.sort((a,b) => a.price - b.price);
+		}
+	});
+
+
+	
 	// obtain a reduced list of products based on restrictions
     var optionArray = restrictListProducts(products, s1.value);
 
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
 	// <label for="Bread">Bread/label><br>
-		
+
 	for (i = 0; i < optionArray.length; i++) {
 
 		var productName = optionArray[i];
