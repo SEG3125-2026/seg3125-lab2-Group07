@@ -40,6 +40,12 @@ body{
   border-top: none;
 }
 
+.container {
+  display: flex;
+  column-gap:15px;
+  padding: 10px;
+}
+
  /* 50% bigger font-size */
 .bigFont {
   font-size: 1.5em; 
@@ -73,7 +79,21 @@ label {
   gap: 24px;
   padding: 24px;
   text-align: center;
+  width:80%;
 }
+
+#sideBar{
+  background-color: chocolate;
+  width: 12%;
+  margin-top: 20px;
+  padding: 24px;
+}
+
+.priceChoice{
+  display:list-item;
+}
+
+
 
 .card {
   background: rgb(241, 240, 240);
@@ -85,8 +105,8 @@ label {
 }
 
 .card img {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   object-fit: cover;
   border-radius: 5px;
 }

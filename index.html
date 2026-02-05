@@ -37,8 +37,20 @@
   <h3>Your targeted products</h3>
   <p>We preselected products based on your restrictions.</p>
 	 Choose items to buy:
-	 <div id="displayProduct"></div>
-
+	<div class="container">
+   <div id="sideBar">
+    <form id="priceRange">
+      <p>Price range</p>
+      <input class="priceChoice" id="0to5" type="radio" name="priceRange" value="Bellow5">
+      <label for="0to5"> Bellow 5$</label>
+      <input class="priceChoice" id="0to10" type="radio" name="priceRange" value="Bellow10">
+      <label for="0to10"> Bellow 10$</label>
+      <input class="priceChoice" id="0to20" type="radio" name="priceRange" value="Bellow20">
+      <label for="0to20"> Bellow 20$</label>
+    </form>
+   </div>
+   <div id="displayProduct"> Please Specify Your Choices First!!</div>
+  </div>
 
 
 	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
