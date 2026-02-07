@@ -39,13 +39,15 @@
 	 Choose items to buy:
 	<div class="container">
    <div id="sideBar">
+    <p id="priceRangeTitle"><strong>Price ranges</strong></p>
     <form id="priceRange">
-      <p>Price range</p>
-      <input class="priceChoice" id="0to5" type="radio" name="priceRange" value="Bellow5">
+      <input class="priceChoice" id="noRange" type="radio" name="priceRange" value="noRange" onchange="sortByRange(this.id, 'displayProduct')">
+      <label for="noRange"> None </label>
+      <input class="priceChoice" id="0to5" type="radio" name="priceRange" value="Below5" onchange="sortByRange(this.id, 'displayProduct')">
       <label for="0to5"> Bellow 5$</label>
-      <input class="priceChoice" id="0to10" type="radio" name="priceRange" value="Bellow10">
+      <input class="priceChoice" id="0to10" type="radio" name="priceRange" value="Below10" onchange="sortByRange(this.id, 'displayProduct')">
       <label for="0to10"> Bellow 10$</label>
-      <input class="priceChoice" id="0to20" type="radio" name="priceRange" value="Bellow20">
+      <input class="priceChoice" id="0to20" type="radio" name="priceRange" value="Below20" onchange="sortByRange(this.id, 'displayProduct')">
       <label for="0to20"> Bellow 20$</label>
     </form>
    </div>
